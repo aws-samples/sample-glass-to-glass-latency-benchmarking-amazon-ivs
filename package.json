@@ -1,0 +1,31 @@
+{
+  "name": "amazon-ivs-g2g-latency-benchmarking",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Glass-to-glass latency benchmarking harness for Amazon IVS Real-Time (Stages)",
+  "scripts": {
+    "dev": "vite",
+    "dev:https": "HTTPS=true vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "amazon-ivs-web-broadcast": "1.36.0",
+    "axios": "1.18.1",
+    "jsqr": "1.4.0",
+    "pinia": "3.0.4",
+    "pinia-plugin-persistedstate": "4.7.1",
+    "qrcode": "1.5.4",
+    "vue": "3.5.38",
+    "vue-router": "4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "5.2.4",
+    "autoprefixer": "10.5.2",
+    "postcss": "8.5.15",
+    "tailwindcss": "3.4.19",
+    "vite": "6.4.3",
+    "vite-plugin-mkcert": "1.17.12"
+  }
+}
