@@ -26,7 +26,7 @@
             <input
               v-model="name"
               class="w-full mt-1 px-3 py-2 rounded-lg bg-neutral-950 ring-1 ring-white/10 font-mono text-sm"
-              placeholder="obs-dealer-1"
+              placeholder="obs-channel-1"
             />
           </div>
           <div>
@@ -34,7 +34,7 @@
             <input
               v-model="userId"
               class="w-full mt-1 px-3 py-2 rounded-lg bg-neutral-950 ring-1 ring-white/10 font-mono text-sm"
-              placeholder="dealer-1"
+              placeholder="channel-1"
             />
           </div>
         </div>
@@ -142,8 +142,8 @@
 import { computed, ref, watch } from 'vue';
 
 const stageArn = ref(localStorage.getItem('g2g-obs-stage-arn') || '');
-const name = ref(localStorage.getItem('g2g-obs-name') || 'obs-dealer-1');
-const userId = ref(localStorage.getItem('g2g-host-id') || 'dealer-1');
+const name = ref(localStorage.getItem('g2g-obs-name') || 'obs-channel-1');
+const userId = ref(localStorage.getItem('g2g-host-id') || 'channel-1');
 const responseJson = ref('');
 
 watch(stageArn, (v) => localStorage.setItem('g2g-obs-stage-arn', v));

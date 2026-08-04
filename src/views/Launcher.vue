@@ -20,7 +20,7 @@
         <input
           v-model="hostId"
           class="w-full px-3 py-2 rounded-lg bg-neutral-900 ring-1 ring-white/10 font-mono focus:outline-none focus:ring-2 focus:ring-red-500"
-          placeholder="e.g. dealer-1"
+          placeholder="e.g. channel-1"
         />
 
         <div class="grid grid-cols-2 gap-3 mt-2">
@@ -80,7 +80,7 @@ import { useBackendStore } from '../stores/backend';
 const router = useRouter();
 const backendStore = useBackendStore();
 
-const hostId = ref(localStorage.getItem('g2g-host-id') || 'dealer-1');
+const hostId = ref(localStorage.getItem('g2g-host-id') || 'channel-1');
 
 function persistAndGo(path) {
   localStorage.setItem('g2g-host-id', hostId.value);
