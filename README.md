@@ -155,12 +155,20 @@ Open `/settings`, paste the **Domain ID** and **API key** from Step 1, and choos
 
 Credentials are stored in that browser's `localStorage` and are sent only to your own backend. **Every machine taking part needs them entered locally**, publisher and viewers alike.
 
+
+`/settings`
+![Figure 1](./figures/figure-1.png)
+
+`/host/channel-1`
+`/watch/channel-1`
+![Figure 2](./figures/figure-2.png)
+
+
 ### Step 4: Host the app for a cross-region test (optional)
 
 For a genuine multi-region measurement, the remote viewer needs to load the app too. Either:
 
 - **Static hosting (recommended).** Run `npm run build` and serve `dist/` from S3 + CloudFront or AWS Amplify Hosting. Configure the host to rewrite unknown paths to `/index.html`, otherwise a hard load of `/watch/:hostId` returns 404.
-- **Tunnel.** `cloudflared tunnel --url https://localhost:5173` or `ngrok http 5173`. Quick for ad-hoc runs, though it adds a hop in front of the app (not in front of the media).
 
 ## Running a benchmark
 
@@ -225,6 +233,7 @@ Chrome DevTools network throttling does **not** affect WebRTC traffic. To shape 
 - **Ground truth** - `chrome://webrtc-internals` for raw RTP statistics, graphs, and the selected ICE candidate pair.
 
 ABR is reactive rather than predictive: sustained congestion over 5–15 seconds is what triggers a layer step-down.
+
 
 ## Publishing from OBS
 
